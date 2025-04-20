@@ -1,0 +1,64 @@
+<HTML>
+ <HEAD><TITLE>TemporalLife Solver</TITLE></HEAD>
+ <SCRIPT SRC="tlife.js"></script>
+<BODY ONLOAD="populate_tables()">
+
+<FORM>
+<TABLE BORDER=1><TBODY><TR><TD>
+<TABLE>
+ <TBODY ID="YEAR1">
+  <TR><TH COLSPAN=5>Year = 1 </TH></TR>
+ </TBODY>
+</TABLE>
+<INPUT TYPE=TEXT ID=YEAR1INT NAME=YEAR1INT VALUE=0 ONCHANGE="set_from_int(1)">
+
+</TD><TD>
+<TABLE>
+ <TBODY ID="YEAR2">
+  <TR><TH COLSPAN=5>Year = 2 </TH></TR>
+ </TBODY>
+</TABLE>
+<INPUT TYPE=TEXT ID=YEAR2INT NAME=YEAR2INT VALUE=0 ONCHANGE="set_from_int(2)">
+
+</TD><TD>
+<TABLE>
+ <TBODY ID="YEAR3">
+  <TR><TH COLSPAN=5>Year = 3 </TH></TR>
+ </TBODY>
+</TABLE>
+<INPUT TYPE=TEXT ID=YEAR3INT NAME=YEAR3INT VALUE=0 ONCHANGE="set_from_int(3)">
+
+</TD><TD>
+<TABLE>
+ <TBODY ID="YEAR4">
+  <TR><TH COLSPAN=5>Year = 4 </TH></TR>
+ </TBODY>
+</TABLE>
+
+<INPUT TYPE=TEXT ID=YEAR4INT NAME=YEAR4INT VALUE=0 ONCHANGE="set_from_int(4)">
+
+
+</TD><TD>
+<TABLE>
+ <TBODY ID="YEAR5">
+  <TR><TH COLSPAN=5>Year = 5 </TH></TR>
+ </TBODY>
+</TABLE>
+
+<INPUT TYPE=TEXT ID=YEAR5INT NAME=YEAR5INT VALUE=0 ONCHANGE="set_from_int(5)">
+
+
+</TD></TR></TBODY></TABLE>
+<p id=CellInfo></p>
+</FORM>
+
+<h2>Rules and Information</h2>
+
+<ul><li>A cell can be alive if either 5 or 6 of its neighbours in the previous year and following year
+combined are alive.</li>
+<li>Year 2 is automatically calculated. Year 3 changes colour -- blue means too few neighbours for the
+cell to be alive; red means too many neighbours to be alive; green means the cell has just the right
+neighbours and shouldn't be dead.</li>
+</ul>
+</BODY>
+</HTML>
